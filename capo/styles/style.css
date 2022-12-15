@@ -1,0 +1,737 @@
+/*---------------------------- Generelt ---------------------------*/ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: kepler-std, serif;
+    src: url(https://use.typekit.net/akq2pwe.css);
+    font-display: swap;
+  }
+
+/*Smooth scroll til sektioner*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Generelt for alt indhold på siden*/
+body {
+    background-color: #faecdd;
+    overflow-x: hidden;
+    font-family: kepler-std, serif;
+}
+
+/*Orange boks til CTA-knapper*/
+.orange_cta {
+    background-color: #dd6f48;
+    color: #faf7e8;
+    padding: 11px 20px 11px 20px;
+}
+
+/*Orange kasse rundt om sektioner*/
+.orange_box {
+    border-style: solid;
+    border-color: #dd6f48 ;
+    margin: 75px auto 75px auto;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.orange_box > div {
+    padding: 10px;
+}
+
+/*Orange border rundt om links i navigationsbaren så brugerne ved, hvor de befinder sig*/
+.orange_border {
+    border-style: solid;
+    border-color: #dd6f48;
+    border-width: 1px;
+    padding: 10px 20px 10px 20px;
+}
+
+/*Generelt regel med centrering, som er brugt flere steder*/
+.center {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+/*Fade up effekt ved sektioner mens der scrolles på siden*/
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+/*HEADER OG NAVIGATIONSLINJE*/
+/*Placering og fastsættelse af header*/
+header {
+    display: flex;
+    padding: 10px 0px 10px 20px;
+    position: sticky;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top:0;
+    background-color: #faecdd;
+}
+
+/*Størrelse på logo i header*/
+.header_logo > a > img {
+    width: 100px;
+}
+
+/*Navigationsbar*/ 
+header > .navigationsbar{
+    display: flex;
+    margin-left: 660px;
+    font-size: 12pt;
+}
+
+/*Placering af links i navigationsbaren*/
+header > .navigationsbar > .dropdown {
+    justify-content: space-around;
+    margin: auto 0px auto 50px;
+}
+
+header > .navigationsbar > .orange_cta {
+    margin: auto 0px auto 50px;
+}
+
+/*Farve på links i navigationsbar*/
+header > .navigationsbar > .dropdown > div > a { 
+    color: #006633;
+}
+
+/*Design af links i dropdown*/
+.dropdown-content > a {
+    float: none;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+  
+/*Styling af "underlinks" i navigationbaren */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #faecdd;
+    border-color: #dd6f48;
+    border-width: 10px;
+    min-width: 160px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+  }
+  
+/*Styling af "underlinks" når markøren bevæges over linket*/
+.dropdown-content > a:hover {
+    background-color: #e7dccf;
+  }
+  
+/*Gør "underlinks"/dropdown synlig */
+.dropdown:hover > .dropdown-content {
+    display: block;
+  }
+
+
+/*Generel regel til at give mere whitespace*/
+.padding_top {
+    padding-top: 70px;
+}
+
+/*GENERELLE REGLER FOR FONT OG SKRIFTTYPER*/
+h1 {
+    font-size: 28pt;
+    color: #006633;
+    padding: 50px 0px 15px 0px;
+}
+
+p {
+    font-size: 17pt;
+    color: #006633;
+    padding: 10px 0px 50px 0px;
+    line-height: 1.5;
+}
+
+/*---------------------------- Forside ----------------------------*/
+/*HEROSEKTION*/
+/*Størrelse og placering af logo ved stor skærm */
+.rundt_logo {
+    position: absolute;
+    display: block;
+}
+
+.rundt_logo > img {
+    width: 70%;
+    filter: drop-shadow( 1px 1px 5px rgba(0,0,0,0.2));
+}
+
+/*Animation til rundt logo i hero sektion*/
+.fadeUp {
+    animation: fadeUp 1.2s both;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/*Tekst under logo*/
+.hero_tekst {
+    position: absolute;
+    font-size: 25px;
+    color: #dd6f48;
+}
+
+/*HERO SEKTION*/
+.hero_sektion {
+    width: 100%;
+}
+
+.hero_billede {
+    padding-top: 50px;
+}
+
+/*Gør at sektioner ikke er på "linje" - efter brug af "float: tight" på hero billedet*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.illustration_skilt > img {
+    width:80%;
+}
+
+/*HORISONTAL GALLERI*/
+#gallery {
+    width: 100vw;
+    overflow: hidden;
+}
+  
+/*Gør at galleriet er horisontalt*/
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: visible;
+    padding: 2vw;
+}
+
+/*Størrelse på billeder i galleri*/
+.horizontal > img {
+    width: auto;
+    height: 550px;
+}
+
+/*Mellemrum mellem billeder i galleri*/
+.horizontal > img + img {
+    margin-left: 1vw;
+}
+
+/*INSTAGRAM SEKTION*/
+/*Centrere sektionen og giver mellemrum mellem billeder*/
+#sociale_medier {
+    text-align: center;
+    padding: 50px;
+}
+
+#sociale_medier > h1 {
+    padding-bottom: 50px;
+}
+
+/*Gør sektionen responsivt med flex-direction*/
+.instagram_billede {
+    margin: 5px;
+    height: 20%;
+    flex-direction: column;
+}
+
+.instagram_billede:hover {
+    cursor: pointer;
+}
+
+/*LOKATION*/
+/*Størrelse på lokation*/
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+#lokation > h1 {
+    padding-bottom: 50px;
+}
+#marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+/*------------------------------------- HISTORIEN BAG ------------------------------------*/
+
+/*VIDEO*/
+/*Placering af video i midten*/
+.video {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*Størrelse på illustrationer*/
+#staff_illustration {
+    width: 60%;
+}
+
+#illustration_naturvin {
+    width: 30%;
+}
+
+/*FRA JORD TIL BORD*/
+/*Fra jord til bord illustrationers placering i forhold til animation*/
+.illustration_1 {
+    bottom: 1089.5px;
+    right: 194px;
+}
+
+.illustration_2 {
+    bottom: 1090px;
+    left: 251px;
+}
+
+.illustration_3 {
+    bottom: 947px;
+    right: 198px;
+}
+
+.info_size {
+    width: 40px;
+}
+
+/*Tekstfelt kommer frem ved hover over Info-knapper i tidslinje*/
+.info_knap:hover:after {
+    position: absolute;
+    content: attr(aria-label);
+    display: inline-block;
+    width: 250px;
+    font-size: 13pt;
+    padding: 20px 30px 20px 30px;
+    background-color: #faecdd;
+    color: #006633;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+}
+
+/*------------------------------------Kontakt-----------------------------------------*/
+
+/*"Skriv til os"-funktion*/
+form {
+    align-items: center;
+    display: grid;
+    margin: auto;
+}
+
+/*Styling af name og email felter*/
+input{
+    height: 50px;
+    background-color: #faecdd;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: #006633;
+    font-size: 15pt;
+    color: #006633;
+    margin-bottom: 5px;
+    font-family:kepler-std, serif;
+}
+ 
+/*Styling af tekstfelt til besked*/
+textarea {
+    outline: none;
+    height: 200px;
+    background-color: #faecdd;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;
+    border-color:#006633;
+    font-family: kepler-std, serif;
+    font-size: 15pt;
+    color: #006633;
+}
+
+#name{
+    color: #006633;
+    margin-top: 25px;
+    padding-bottom: 15px;
+}
+
+#email {
+    padding-bottom: 15px;
+}
+
+/*Placering af send-knap*/
+#send{
+    margin-bottom: -20px;
+    cursor: pointer;
+    margin: auto;
+    text-decoration:underline;
+    margin-top: 20px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #403A32;
+}
+
+.footer_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.footer_box > div > a > img{
+    width: 50px;
+    padding-left: 20px;
+}
+
+.footer_box > .header_logo > img {
+    width: 150px;
+}
+
+.footer_box > div > p{
+    color: #FAF7E6;
+}
+
+/*------------------------------------- Responsivt (LAPTOP) ---------------------------------------*/
+
+@media only screen and (min-width:768px) {
+
+/*Skjuler burgermenu ved computer størrelse*/
+.burgermenu {
+     display: none;
+}
+
+/*------------ Forside ------------*/
+/*Størrelse på hero-billede*/
+.hero_billede > img{
+    width: 80%;
+    float: right;
+}
+
+/*Placering a logo på forside*/
+.rundt_logo {
+    left: 40%;
+    top: 30%;
+}
+
+/*Placering af tekst under logo*/
+.hero_tekst {
+    left: 40.5%;
+    top: 72%;
+    width: 50%;
+}
+
+/*Generel regel for tekstsykker, som centreres og overskrift venstrestilles*/
+.tekststykke {
+    margin: auto;
+    width: 50%;
+}
+
+/*Bredde på sektioner med orange ramme*/
+.orange_box {
+    width: 70%;
+}
+
+/*FOOTER*/
+.footer_box {
+    width: 80%;
+}
+
+.footer_box > .header_logo > img {
+    padding: 0px 300px 0px 0px;
+}
+
+.footer_box > div > p{
+    margin: 50px 200px 5px 0px;
+}
+
+/*--------- Historien bag ---------*/
+/*Størrelse på video*/
+.video {
+    max-width: 80%;
+}
+
+/*Størrelse på illustrationer i fra jord til bord sektionen*/
+.illustration_size {
+    width: 20%;
+    position: relative;
+}
+
+/*Placering af tidslinjen (fra jord til bord)*/
+.tidslinje {
+    width: 50%;
+    margin: auto;
+    padding-top: 150px;
+}
+
+/*Placering af info-knapper ved tidslinjen*/
+.info_1_placering {
+    position: relative;
+    bottom: 1150px;
+    right: 120px;
+}
+
+.info_2_placering {
+    position: relative;
+    bottom: 1115px;
+    left: 350px;
+}
+
+.info_3_placering {
+    position: relative;
+    bottom: 980px;
+    right: 100px;
+}
+
+.info_knap:hover:after {
+    margin-left: 10px;
+}
+
+/*------------ Kontakt os ------------*/ 
+
+/*Størrelse på illustration*/
+.illustration_telefon > img {
+    width: 550px;
+    position: relative;
+    left: 200px;
+    top: 100px;
+} 
+
+#kontakt_oplysninger {
+    padding-bottom: 150px;
+    overflow:hidden;
+}
+
+#kontakt_oplysninger > div:nth-child(2) {
+    margin-right: 200px;
+}
+
+/*Gavekort sektion*/
+/*Placering af sektion*/
+#gavekort {
+    height: 400px;
+}
+
+#gavekort > div {
+    padding-top: 50px;
+}
+
+#gavekort > div > img {
+    width: 350px;
+}
+
+/*Størrelse på skriv til os funktion*/
+form {
+    height: 600px;
+    width: 550px;
+}
+}
+
+/*----------------------------------- Responsive (MOBIL) ----------------------------------- */
+
+@media only screen and (max-width:768px) {
+/*BURGERMENU ved mobilstørrelse*/
+/*placering af burgermenu*/
+.burgermenu {
+    margin-top: 10px;
+}
+
+/*Skjuler navigationslinje ved mobilstørrelse*/
+header > .navigationsbar {
+    display: none;
+}
+
+/*Burgermenu fremtræder ved mobilstørrelse*/
+.burgermenu {
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/*Størrelse på burger menu*/
+#burger-icon {
+    width:50px;
+    padding-right: 10px;
+}
+
+.burgermenu > .dropdown-content > a {
+    color: #006633;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 12pt;
+    font-weight: 150;
+  }
+
+/*Styling af "underlinks" i burgermenuens navigationbar*/
+.burgermenu > .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#faecdd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 0;
+    right: 0;
+    width: 400px;
+    text-decoration: underline;
+    
+  }
+
+/*Styling af "underlinks" når markøren bevæges over linket*/
+.burgermenu >.dropdown-content > a:hover {
+    background-color:#e7dccf;
+}
+  
+/*Gør "underlinks"/dropdown synlig */
+.burgermenu:active >  .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+
+/*farve på font til "book bord"-knap i burgermenu */
+.burgermenu > .dropdown-content > .orange_cta {
+    color: #FAF7E6;
+}
+
+/*Hero billede udfylder hele skærmen på mobil*/
+.hero_billede > img{
+    width: 100%;
+}
+
+/*Placering af logo og tekst under i midten ved mobil*/
+.rundt_logo {
+    left: 25%;
+    top: 20%;
+}
+
+.hero_tekst {
+    top:60%;
+    right: 24%;
+    }
+
+/*Generel regel for tekstsykker, som centreres og overskrift venstrestilles*/
+.tekststykke {
+    margin: auto;
+    width: 90%;
+}
+
+/*Gør at elementer i sektionerne med orange ramme er responsive*/
+.orange_box {
+    flex-direction: column;
+    text-align: center;
+}
+
+/*Menukort udfyler hele skærmen ved mobil*/
+.menukort {
+    width: 100%;
+}
+
+/*Størrelse på instagram billeder*/
+.instagram_billede {
+    width: 40%;
+    height: 40%;
+}
+
+/*Gør at footer er tilpasset mobil*/
+.footer_box {
+    width: 100%;
+}
+
+.footer_box > div {
+    width: 25%;
+    margin: 40px;
+}
+
+.footer_box > div > p{
+    font-size: 12pt;
+}
+
+/*Video udfylder hele skærmen på mobil*/
+.video {
+    width: 100%;
+}
+
+/*Størrelse på illustrationer ved mobil*/
+.illustration_size {
+    width: 50%;
+}
+
+/*Skjuler tidslinjen ved mbilstørrelse, da det kun fungere på laptop*/
+.tidslinje {
+    display: none;
+}
+
+/*Ændre placering på info-knapper ved mobil så de er under illustrationerne i stedet for*/
+.info_knap:hover:after {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -170px;
+}
+
+/*Kontaktoplysninger*/ 
+.illustration_telefon > img {
+    width: 80%;
+    position: relative;
+}  
+
+/*Størrelse af illustration af gavekort ved mobil*/
+#gavekort > div > img {
+    width: 70%;
+}
+
+/*Bredde på kontaktformularen ved skriv til os funktionen*/
+form {
+    height: 600px;
+    width: 80%;
+}
+}
+

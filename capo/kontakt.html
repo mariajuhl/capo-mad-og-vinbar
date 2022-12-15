@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakt side med alle CAPO's kontaktoplysninger: telefon nr, e-mail samt åbningstider.">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet"/>
+    <title>Capo</title>
+</head>
+
+<body>
+
+<!-------------------------- Burgermenu til mobilversion -------------------------->
+<header>
+    <div class="burgermenu">  
+        <div class="dropdown-button">
+        <a href="#"><img src="images/burgermenu.png" alt="Burgermenu" id="burger-icon"> </a>
+        </div>
+    
+        <div class="dropdown-content">
+        <a href="index.html">Forside</a>
+        <a href="menukort.html">Menukort</a>
+        <a href="historien_bag.html">Historien bag</a>
+        <a href="kontakt.html">Kontakt os</a>
+        <a href="https://book.easytablebooking.com/book/?id=6ed41&lang=auto" class="orange_cta">Book bord</a>
+        </div>
+    </div> 
+
+<!--------------------- Header sektion med navigationslinje --------------------->
+
+    <div class="header_logo">
+    <a href="index.html"><img src="images/logo.png" alt="Capos logo"></a> 
+    </div>
+
+    <div class="navigationsbar">
+
+        <div class="dropdown">  
+            <div class="dropdown-button">
+            <a href="index.html">Forside</a>
+            </div>
+
+            <div class="dropdown-content">
+            <a href="index.html#åbningstider">Åbningstider</a>
+            <a href="index.html#sociale_medier">Sociale medier</a>
+            <a href="index.html#lokation">Find os</a>
+            </div>
+        </div> 
+
+        <div class="dropdown">  
+            <div class="dropdown-button">
+            <a href="menukort.html">Menukort</a>
+            </div>
+        </div> 
+    
+        <div class="dropdown">  
+            <div class="dropdown-button">
+            <a href="historien_bag.html ">Historien bag</a>
+            </div>
+
+            <div class="dropdown-content">
+            <a href="historien_bag.html#fra_drue_til_dug">Fra drue til dug</a>
+            <a href="historien_bag.html#fra_jord_til_bord">Fra jord til bord</a>
+            </div>
+        </div> 
+    
+        <div class="dropdown">  
+            <div class="dropdown-button">
+               <a href="kontakt.html" class="orange_border">Kontakt</a>
+            </div>
+
+            <div class="dropdown-content">
+                <a href="kontakt.html#kontakt_oplysninger">Kontakt os</a>
+                <a href="kontakt.html#åbningstider">Åbningstider</a>
+                <a href="kontakt.html#skriv_til_os">Skriv til os</a>
+                <a href="kontakt.html#gavekort">Gavekort</a>
+                <a href="kontakt.html#find_os">Find os</a>
+            </div>
+        </div> 
+
+        <a href="https://book.easytablebooking.com/book/?id=6ed41&lang=auto" target="_blank" class="orange_cta">Book bord</a>
+    </div>
+</header>
+
+<!-------------------------- Hero sektion med intro til kontakt -------------------------->
+
+<section class="tekststykke padding_top">
+        <h1>Kontakt os</h1>
+        <p>Nedenfor finder du alle vores kontaktinformationer,
+        så du hurtigt og nemt kan få fat i os. </p>
+</section>
+
+
+<!-------------------------- Sektion med kontaktoplysninger -------------------------->
+
+<section id="kontakt_oplysninger" class="orange_box reveal fade-bottom">
+    <div class="illustration_telefon">
+        <img src="images/telefon.png" alt="skilt med åbningstider">
+    </div>
+    
+    <div>
+        <h1>Kontaktoplysninger</h1>
+        <p>Tlf: +45 71 90 93 41
+            <br>
+            Mail: kontakt@capoaarhus.com 
+        </p>
+        <a href="kontakt.html#skriv_til_os" class="orange_cta">Skriv til os</a>
+    </div>
+
+</section>
+
+<!-------------------------- Horisontal galleri -------------------------->
+<section id="gallery">
+    <div class="horizontal">
+        <img src="images/billede1.webp" alt="Fin vin udstilling ">
+        <img src="images/billede10.webp" alt="Capos facade close-up">
+        <img src="images/billede3.webp" alt="Et blik indenfor hos Capo">
+        <img src="images/billede6.webp" alt="Capos facade">
+        <img src="images/billede1.webp" alt="Fin vin udstilling ">
+        <img src="images/billede10.webp" alt="Capos facade close-up">
+        <img src="images/billede3.webp" alt="Et blik indenfor hos Capo">
+        <img src="images/billede6.webp" alt="Capos facade">
+        <img src="images/billede1.webp" alt="Fin vin udstilling ">
+        <img src="images/billede10.webp" alt="Capos facade close-up">
+        <img src="images/billede3.webp" alt="Et blik indenfor hos Capo">
+        <img src="images/billede6.webp" alt="Capos facade">
+    </div>
+</section>
+
+<!-------------------------- Sektion med åbningstider -------------------------->
+<section id="åbningstider" class="orange_box reveal fade-bottom">
+    <div>
+    <h1>Vores åbningstider</h1>
+    <p>Vi holder åbent: <br>
+        Onsdag-torsdag fra kl. 16 - luk. <br>
+        Fredag - lørdag fra kl. 14 - luk. <br>
+        <br>
+        Vi ses! <br>
+    </p>
+
+    <a href="https://book.easytablebooking.com/book/?id=6ed41&lang=auto" class="orange_cta">Book bord</a>
+    </div>
+
+    <div class="illustration_skilt">
+    <img src="images/capo-skilt.png" alt="skilt med åbningstider">
+    </div>
+</section>
+
+
+<!--Skriv til os funktion - kode fundet vha https://codepen.io/breel56/pen/ZMrrWr -->
+<section id="skriv_til_os">
+<form id="feedback-form">
+    <h1>Skriv til os</h1>
+	<input id="name" type="text" placeholder="Navn">
+	<input id="email" type="text" placeholder="E-mail">
+	<textarea id="message" placeholder="Skriv din besked her..."></textarea>
+    <a id="send" class="orange_cta" onClick="thankYou()">Send besked</a>
+</form>
+</section>
+ 
+<!-------------------------- Sektion med gavekort -------------------------->
+<section id="gavekort" class="orange_box reveal fade-bottom">
+    <div>
+    <h1>Gavekort</h1>
+    <p>Forkæl en du holder af med et gavekort <br> til CAPO.</p>
+    <a href="https://order.lifepeaks.dk/capo#step_1" target="_blank" class="orange_cta">Køb gavekort</a>
+    </div>
+
+    <div>
+    <img src="images/gavekort.png" class="illustration_size" alt="illustration af gavekort til capo">
+    </div>
+</section>
+
+<!-------------------------- Lokation -------------------------->
+<section id="lokation">
+    <h1 class="center">Lokation</h1>
+    <div id="map"></div>
+</section>
+
+<!-------------------------- Footer -------------------------->
+<footer>
+    <div class="footer_box">
+        <div>
+            <p>
+            Tlf: +45 71 90 93 41 <br>
+            Mail: kontakt@capoaarhus.com <br>
+            CVR-nr: 43066420
+            </p>
+            </div>
+        
+            <div class="header_logo"> 
+            <img src="images/logo.png" alt="Capo's logo">
+            </div>
+        
+            <div>
+            <a href="https://www.instagram.com/capo.aarhus/" target="_blank"><img src="images/instagram.png" alt="Capos logo"></a> 
+            <a href="https://www.facebook.com/profile.php?id=100079025130357" target="_blank"><img src="images/facebook.png" alt="Capos logo"></a> 
+            </div>
+        </div>
+        </footer>
+    
+<!-------------------------- Link til Javascript -------------------------->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
+
